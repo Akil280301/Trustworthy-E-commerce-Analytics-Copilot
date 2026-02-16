@@ -1,0 +1,16 @@
+psycopg2-binary
+sqlalchemy==2.0.40
+pandas==2.2.3
+numpy==2.2.3
+ollama==0.4.7
+langchain==0.3.20
+langchain-community==0.3.19
+faiss-cpu==1.10.0
+sentence-transformers==3.4.1
+rapidfuzz==3.12.1
+scikit-learn==1.6.1
+streamlit==1.43.1
+plotly==5.24.1
+jsonlines==4.0.0
+python-dotenv==1.0.1
+tqdm==4.67.1
