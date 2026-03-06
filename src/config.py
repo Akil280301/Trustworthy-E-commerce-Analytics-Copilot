@@ -12,7 +12,7 @@ load_dotenv()
 # ── Database ──────────────────────────────────────────────
 DB_CONFIG = {
     "host":     os.getenv("DB_HOST", "localhost"),
-    "port":     int(os.getenv("DB_PORT", 5432)),
+    "port":     int(os.getenv("DB_PORT", 5433)),
     "dbname":   os.getenv("DB_NAME", "instacart"),
     "user":     os.getenv("DB_USER", "instacart"),
     "password": os.getenv("DB_PASSWORD", "instacart123"),

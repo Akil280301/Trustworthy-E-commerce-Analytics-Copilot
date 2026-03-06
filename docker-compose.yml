@@ -1,18 +1,18 @@
 version: "3.9"
 
 services:
-  postgres:
+  instacart:
     image: postgres:16
-    container_name: instacart_db
+    container_name: instacart
     restart: unless-stopped
     environment:
       POSTGRES_USER: instacart
       POSTGRES_PASSWORD: instacart123
       POSTGRES_DB: instacart
     ports:
-      - "5432:5432"
+      - "5433:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - instacart_data:/var/lib/postgresql/data
 
 volumes:
-  postgres_data:
+  instacart_data:
