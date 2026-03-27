@@ -113,7 +113,13 @@ STRICT RULES — follow every one of these without exception:
 10. order_dow mapping: 0=Sunday, 1=Monday, 2=Tuesday, 3=Wednesday, 4=Thursday, 5=Friday, 6=Saturday.
     WEEKEND = order_dow IN (0, 6). WEEKDAY = order_dow IN (1, 2, 3, 4, 5).
 11. When joining product_enriched, always use LOWER() on both sides of the join condition.
-12. Never use ROUND(float_column, 2) directly — always write ROUND(float_column::numeric, 2).
+    CRITICAL: product_enriched has duplicate product names — always use DISTINCT or add
+    GROUP BY with MIN()/AVG() on nutrition columns to avoid duplicate rows.
+    Use this pattern: JOIN (SELECT LOWER(product_name) as pname,
+    nutrition_grade_fr, AVG(energy_100g) as energy_100g,
+    AVG(proteins_100g) as proteins_100g, AVG(sugars_100g) as sugars_100g
+    FROM product_enriched GROUP BY LOWER(product_name), nutrition_grade_fr) pe
+    ON LOWER(p.product_name) = pe.pname12. Never use ROUND(float_column, 2) directly — always write ROUND(float_column::numeric, 2).
 13. If the question truly cannot be answered with the available schema, return exactly:
     UNSUPPORTED_QUERY
 """
@@ -200,8 +206,11 @@ def generate_sql(question: str) -> dict:
     Full RAG → Groq → Validate → Execute pipeline.
     Returns a structured result dict with all intermediate outputs.
     """
-    # Step 1: Retrieve relevant context from FAISS knowledge base
-    context = retrieve_context(question, top_k=3)
+    # Step 1: Retrieve relevant context — FAISS docs + Live DB data
+    from src.rag_db_context import get_live_db_context
+    faiss_context  = retrieve_context(question, top_k=3)
+    live_context   = get_live_db_context(question)
+    context        = faiss_context + "\n\n" + live_context
 
     # Step 2: Call Groq LLaMA 3.3 70B
     t_start = time.time()
