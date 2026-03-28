@@ -8,7 +8,6 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.x-FF4B4B?logo=streamlit)](https://streamlit.io)
 [![Groq](https://img.shields.io/badge/Groq-LLaMA_3.3_70B-orange)](https://groq.com)
 [![FAISS](https://img.shields.io/badge/FAISS-Vector_Search-green)](https://github.com/facebookresearch/faiss)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ---
 
@@ -306,19 +305,13 @@ Show customer emails                      -> Unsupported (no PII in dataset)
 
 ## Team Contributions
 
-| Member | Modules |
-|--------|---------|
-| Akilesh Shankar | RAG Pipeline (Module 7), Text-to-SQL (Module 8) |
-| Sohail Ali Jafar Ali | RAG Pipeline (Module 7), Text-to-SQL (Module 8) |
-| Kranthi Kumari Sepuri | 5-Layer SQL Validation (Module 8B) |
-| Satej Sunil Zunjarrao | 5-Layer SQL Validation (Module 8B) |
-| Likhitha Mallarapu | Evaluation Benchmark (Module 9) |
-
----
-
-## License
-
-MIT License — see [LICENSE](LICENSE) for details.
+| Member | Modules | Key Responsibilities |
+|--------|---------|---------------------|
+| **Kranthi Kumari Sepuri** | Module 8B · Module 3 · Module 1| 5-Layer SQL Validation pipeline (schema constraints, logical semantic check, plausibility, self-correction, KPI benchmark) · Advanced KPI SQL implementation (retention cohort, basket diversity, repeat purchase rate) · GitHub repository|
+| **Likhitha Mallarapu** | Module 9 · Module 3 | Evaluation benchmark design (50 queries across 3 categories) · Metrics framework (execution success, correctness, hallucination rate, latency) · Basic KPI SQL implementation (total orders, avg basket size, orders by day/hour) |
+| **Satej Sunil Zunjarrao** | Module 8B · Module 2 | 5-Layer SQL Validation co-implementation · Warehouse schema design (7 tables, B-tree indexes, composite indexes, FK integrity) · Data ingestion pipeline (100K row batch loading, 37.3M rows) · environment management|
+| **Sohail Ali Jafar Ali** | Module 7 · Module 8 · Module 4–6 · Module 1| RAG pipeline co-implementation (FAISS index, document chunking, confidence filtering) · Text-to-SQL co-implementation (Groq integration, few-shot prompting, SQL extraction) · Data integration (Open Food Facts entity resolution, 214K nutrition records, fuzzy matching) · Project setup|
+| **Akilesh Shankar** | Module 7 · Module 8 · Module 10 · Module 1 | **RAG pipeline lead** (sentence-transformers MiniLM-L6-v2, FAISS IndexFlatL2, live DB context retriever grounding LLM with real PostgreSQL data) · **Text-to-SQL lead** (Groq LLaMA 3.3 70B, schema-aware system prompt, CTE validation, ::numeric cast fixes, 10/10 test pass rate) · **Streamlit UI** (full dashboard, auto-visualisation, validation display, CSV export) · Docker configuration|
 
 ---
 
