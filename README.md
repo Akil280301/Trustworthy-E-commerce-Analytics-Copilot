@@ -16,11 +16,11 @@
 
 A **trustworthy** e-commerce analytics copilot that converts natural language business questions into validated SQL, executed against a structured 37.3M-row Instacart data warehouse. The system combines:
 
-- **RAG (Retrieval-Augmented Generation)** — FAISS vector search over KPI docs + live PostgreSQL context
-- **Groq LLaMA 3.3 70B** — fast, schema-aware SQL generation with few-shot examples
-- **5-Layer SQL Validation** — schema constraints → logical check → plausibility → self-correction → KPI benchmark
-- **Live Execution** — all numbers computed directly from PostgreSQL, never hallucinated
-- **Streamlit Dashboard** — interactive UI with auto-visualisation, validation display, and CSV export
+- **RAG (Retrieval-Augmented Generation)** - FAISS vector search over KPI docs + live PostgreSQL context
+- **Groq LLaMA 3.3 70B** - fast, schema-aware SQL generation with few-shot examples
+- **5-Layer SQL Validation** - schema constraints → logical check → plausibility → self-correction → KPI benchmark
+- **Live Execution** - all numbers computed directly from PostgreSQL, never hallucinated
+- **Streamlit Dashboard** - interactive UI with auto-visualisation, validation display, and CSV export
 
 ---
 
@@ -49,10 +49,10 @@ User Natural Language Question
 │     RAG Pipeline            │
 │  ┌─────────────────────┐    │
 │  │ MiniLM-L6-v2        │    │
-│  │ FAISS Vector Search │    │  ← KPI docs + SQL examples
+│  │ FAISS Vector Search │    │  <- KPI docs + SQL examples
 │  └─────────────────────┘    │
 │  ┌─────────────────────┐    │
-│  │ Live DB Context     │    │  ← Real product names, KPI values,
+│  │ Live DB Context     │    │  <- Real product names, KPI values,
 │  │ (PostgreSQL)        │    │    department stats, nutrition data
 │  └─────────────────────┘    │
 └─────────────────────────────┘
@@ -97,14 +97,14 @@ User Natural Language Question
 
 ### Schema
 ```
-orders              (3.4M rows)   — order_id, user_id, order_dow, order_hour_of_day
-order_products__prior (32.4M rows) — order_id, product_id, reordered, add_to_cart_order
-order_products__train (1.4M rows)  — same structure, train split
-products            (49,688 rows)  — product_id, product_name, aisle_id, department_id
-aisles              (134 rows)     — aisle_id, aisle
-departments         (21 rows)      — department_id, department
-product_enriched    (173K rows)    — nutrition_grade_fr, energy_100g, proteins_100g …
-holiday_features    (342 rows)     — date, holiday, weekday, month, year
+orders              (3.4M rows)    - order_id, user_id, order_dow, order_hour_of_day
+order_products__prior (32.4M rows) - order_id, product_id, reordered, add_to_cart_order
+order_products__train (1.4M rows)  - same structure, train split
+products            (49,688 rows)  - product_id, product_name, aisle_id, department_id
+aisles              (134 rows)     - aisle_id, aisle
+departments         (21 rows)      - department_id, department
+product_enriched    (173K rows)    - nutrition_grade_fr, energy_100g, proteins_100g …
+holiday_features    (342 rows)     - date, holiday, weekday, month, year
 ```
 
 ---
