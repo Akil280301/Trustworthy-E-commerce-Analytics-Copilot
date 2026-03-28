@@ -190,16 +190,16 @@ docker compose up -d
 
 The project uses three publicly available datasets from Kaggle. Download each one and drop the files directly into a `data_raw/` folder you create in the project root.
 
-**Instacart Market Basket Analysis** → [kaggle.com/datasets/psparks/instacart-market-basket-analysis](https://www.kaggle.com/datasets/psparks/instacart-market-basket-analysis)  
+**Instacart Market Basket Analysis** -> [kaggle.com/datasets/psparks/instacart-market-basket-analysis](https://www.kaggle.com/datasets/psparks/instacart-market-basket-analysis)  
 You need six files from this download: `departments.csv`, `aisles.csv`, `products.csv`, `orders.csv`, `order_products__prior.csv`, and `order_products__train.csv`.
 
-**Open Food Facts** → [kaggle.com/datasets/openfoodfacts/world-food-facts](https://www.kaggle.com/datasets/openfoodfacts/world-food-facts)  
+**Open Food Facts** -> [kaggle.com/datasets/openfoodfacts/world-food-facts](https://www.kaggle.com/datasets/openfoodfacts/world-food-facts)  
 This is a large file (~1.5GB). You only need `en.openfoodfacts.org.products.tsv`. The loader will automatically filter it down to US grocery items.
 
-**US Holiday Dates (2004–2021)** → [kaggle.com/datasets/donnetew/us-holiday-dates-2004-2021](https://www.kaggle.com/datasets/donnetew/us-holiday-dates-2004-2021)  
+**US Holiday Dates (2004–2021)** -> [kaggle.com/datasets/donnetew/us-holiday-dates-2004-2021](https://www.kaggle.com/datasets/donnetew/us-holiday-dates-2004-2021)  
 Single file: `US Holiday Dates (2004-2021).csv`.
 
-Once downloaded, your `data_raw/` folder should have all 8 files in it. None of these are committed to the repo since they are too large for GitHub — the `.gitignore` excludes them intentionally.
+Once downloaded, your `data_raw/` folder should have all 8 files in it. None of these are committed to the repo since they are too large for GitHub - the `.gitignore` excludes them intentionally.
 
 ### 6. Load the warehouse
 ```bash
