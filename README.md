@@ -1,4 +1,4 @@
-# 🛒 Trustworthy E-commerce Analytics Copilot
+# Trustworthy E-commerce Analytics Copilot
 
 > **FSE 570 Capstone Project — Team Texas**  
 > Kranthi Kumari Sepuri · Likhitha Mallarapu · Satej Sunil Zunjarrao · Sohail Ali Jafar Ali · Akilesh Shankar
@@ -12,7 +12,7 @@
 
 ---
 
-## 📌 Overview
+## Overview
 
 A **trustworthy** e-commerce analytics copilot that converts natural language business questions into validated SQL, executed against a structured 37.3M-row Instacart data warehouse. The system combines:
 
@@ -24,7 +24,7 @@ A **trustworthy** e-commerce analytics copilot that converts natural language bu
 
 ---
 
-## 🖥️ Dashboard Screenshots
+## Dashboard Screenshots
 
 ### Landing Page — Warehouse at a Glance
 ![Landing Page](docs/images/landing_page.png)
@@ -40,7 +40,7 @@ A **trustworthy** e-commerce analytics copilot that converts natural language bu
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 ```
 User Natural Language Question
            │
@@ -87,7 +87,7 @@ User Natural Language Question
 
 ---
 
-## 📊 Data Warehouse
+## Data Warehouse
 
 | Dataset | Source | Rows | Description |
 |---------|--------|------|-------------|
@@ -109,7 +109,7 @@ holiday_features    (342 rows)     — date, holiday, weekday, month, year
 
 ---
 
-## 🤖 Module Breakdown
+## Module Breakdown
 
 | Module | Description | Key Files |
 |--------|-------------|-----------|
@@ -123,7 +123,7 @@ holiday_features    (342 rows)     — date, holiday, weekday, month, year
 
 ---
 
-## 📈 Evaluation Results
+## Evaluation Results
 
 ### Benchmark: 50 queries — 30 KPI · 12 Compositional · 8 Adversarial
 
@@ -149,7 +149,7 @@ holiday_features    (342 rows)     — date, holiday, weekday, month, year
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -225,7 +225,7 @@ Open [http://localhost:8501](http://localhost:8501)
 
 ---
 
-## 💡 Example Queries
+## Example Queries
 
 The system handles a wide range of query complexity:
 
@@ -251,14 +251,14 @@ For each hour of the day what is the ratio of reordered items to first time item
 
 **Adversarial (correctly blocked)**
 ```
-Delete all orders from last year          → ❌ Blocked
-What is the revenue from top products?   → ⚠️ Unsupported (no price data)
-Show customer emails                     → ⚠️ Unsupported (no PII in dataset)
+Delete all orders from last year          -> Blocked
+What is the revenue from top products?    -> Unsupported (no price data)
+Show customer emails                      -> Unsupported (no PII in dataset)
 ```
 
 ---
 
-## 🔑 Key Business KPIs
+## Key Business KPIs
 
 | KPI | Value |
 |-----|-------|
@@ -273,7 +273,7 @@ Show customer emails                     → ⚠️ Unsupported (no PII in datas
 
 ---
 
-## 🗓️ Project Timeline
+## Project Timeline
 
 | Phase | Weeks | Deliverable |
 |-------|-------|-------------|
@@ -290,7 +290,7 @@ Show customer emails                     → ⚠️ Unsupported (no PII in datas
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
 | Component | Technology |
 |-----------|-----------|
@@ -304,7 +304,7 @@ Show customer emails                     → ⚠️ Unsupported (no PII in datas
 
 ---
 
-## 👥 Team Contributions
+## Team Contributions
 
 | Member | Modules |
 |--------|---------|
@@ -316,7 +316,7 @@ Show customer emails                     → ⚠️ Unsupported (no PII in datas
 
 ---
 
-## 📄 License
+## License
 
 MIT License — see [LICENSE](LICENSE) for details.
 
