@@ -91,7 +91,7 @@ User Natural Language Question
 | Dataset | Source | Rows | Description |
 |---------|--------|------|-------------|
 | Instacart Market Basket | Kaggle | 37.3M | Orders, products, order-product associations |
-| Open Food Facts | Kaggle | 173K | Nutrition data — energy, protein, grades |
+| Open Food Facts | Kaggle | 173K | Nutrition data - energy, protein, grades |
 | US Holiday Dates | Kaggle | 342 | Federal holidays 2004–2021 |
 
 ### Schema
