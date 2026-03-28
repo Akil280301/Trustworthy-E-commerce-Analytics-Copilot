@@ -309,12 +309,12 @@ Show customer emails                      -> Unsupported (no PII in dataset)
 
 | Member | Modules | Key Responsibilities |
 |--------|---------|---------------------|
-| **Kranthi Kumari Sepuri** | Module 8B · Module 3 · Module 1| 5-Layer SQL Validation pipeline (schema constraints, logical semantic check, plausibility, self-correction, KPI benchmark) · Advanced KPI SQL implementation (retention cohort, basket diversity, repeat purchase rate) · GitHub repository|
-| **Likhitha Mallarapu** | Module 9 · Module 3 | Evaluation benchmark design (50 queries across 3 categories) · Metrics framework (execution success, correctness, hallucination rate, latency) · Basic KPI SQL implementation (total orders, avg basket size, orders by day/hour) |
-| **Satej Sunil Zunjarrao** | Module 8B · Module 2 | 5-Layer SQL Validation co-implementation · Warehouse schema design (7 tables, B-tree indexes, composite indexes, FK integrity) · Data ingestion pipeline (100K row batch loading, 37.3M rows) · environment management|
-| **Sohail Ali Jafar Ali** | Module 7 · Module 8 · Module 4–6 · Module 1| RAG pipeline co-implementation (FAISS index, document chunking, confidence filtering) · Text-to-SQL co-implementation (Groq integration, few-shot prompting, SQL extraction) · Data integration (Open Food Facts entity resolution, 214K nutrition records, fuzzy matching) · Project setup|
-| **Akilesh Shankar** | Module 7 · Module 8 · Module 10 · Module 1 | **RAG pipeline lead** (sentence-transformers MiniLM-L6-v2, FAISS IndexFlatL2, live DB context retriever grounding LLM with real PostgreSQL data) · **Text-to-SQL lead** (Groq LLaMA 3.3 70B, schema-aware system prompt, CTE validation, ::numeric cast fixes, 10/10 test pass rate) · **Streamlit UI** (full dashboard, auto-visualisation, validation display, CSV export) · Docker configuration|
+| **Kranthi Kumari Sepuri** | Module 8B  Module 3  Module 1| 5-Layer SQL Validation pipeline (schema constraints, logical semantic check, plausibility, self-correction, KPI benchmark)  Advanced KPI SQL implementation (retention cohort, basket diversity, repeat purchase rate)  GitHub repository|
+| **Likhitha Mallarapu** | Module 9  Module 3 | Evaluation benchmark design (50 queries across 3 categories)  Metrics framework (execution success, correctness, hallucination rate, latency)  Basic KPI SQL implementation (total orders, avg basket size, orders by day/hour) |
+| **Satej Sunil Zunjarrao** | Module 8B  Module 2 | 5-Layer SQL Validation co-implementation  Warehouse schema design (7 tables, B-tree indexes, composite indexes, FK integrity)  Data ingestion pipeline (100K row batch loading, 37.3M rows)  environment management|
+| **Sohail Ali Jafar Ali** | Module 7  Module 8  Module 4-6  Module 1| RAG pipeline co-implementation (FAISS index, document chunking, confidence filtering)  Text-to-SQL co-implementation (Groq integration, few-shot prompting, SQL extraction)  Data integration (Open Food Facts entity resolution, 214K nutrition records, fuzzy matching)  Project setup|
+| **Akilesh Shankar** | Module 7  Module 8  Module 10  Module 1 | **RAG pipeline lead** (sentence-transformers MiniLM-L6-v2, FAISS IndexFlatL2, live DB context retriever grounding LLM with real PostgreSQL data)  **Text-to-SQL lead** (Groq LLaMA 3.3 70B, schema-aware system prompt, CTE validation, numeric cast fixes, 10/10 test pass rate)  **Streamlit UI** (full dashboard, auto-visualisation, validation display, CSV export)  Docker configuration|
 
 ---
 
-*Built for FSE 570 Software Engineering Capstone — Arizona State University*
+*Built for FSE 570 Software Engineering Capstone - Arizona State University*
