@@ -17,7 +17,7 @@ A **trustworthy** e-commerce analytics copilot that converts natural language bu
 
 - **RAG (Retrieval-Augmented Generation)** - FAISS vector search over KPI docs + live PostgreSQL context
 - **Groq LLaMA 3.3 70B** - fast, schema-aware SQL generation with few-shot examples
-- **5-Layer SQL Validation** - schema constraints → logical check → plausibility → self-correction → KPI benchmark
+- **5-Layer SQL Validation** - schema constraints -> logical check -> plausibility -> self-correction -> KPI benchmark
 - **Live Execution** - all numbers computed directly from PostgreSQL, never hallucinated
 - **Streamlit Dashboard** - interactive UI with auto-visualisation, validation display, and CSV export
 
@@ -124,7 +124,7 @@ holiday_features    (342 rows)     - date, holiday, weekday, month, year
 
 ## Evaluation Results
 
-### Benchmark: 50 queries — 30 KPI · 12 Compositional · 8 Adversarial
+### Benchmark: 50 queries - 30 KPI | 12 Compositional | 8 Adversarial
 
 | Category | Success Rate | Description |
 |----------|-------------|-------------|
@@ -186,18 +186,20 @@ DB_PASSWORD=instacart123
 docker compose up -d
 ```
 
-### 5. Place datasets in `data_raw/`
-```
-data_raw/
-├── departments.csv
-├── aisles.csv
-├── products.csv
-├── orders.csv
-├── order_products__prior.csv
-├── order_products__train.csv
-├── en.openfoodfacts.org.products.tsv
-└── US Holiday Dates (2004-2021).csv
-```
+### 5. Download and place the datasets
+
+The project uses three publicly available datasets from Kaggle. Download each one and drop the files directly into a `data_raw/` folder you create in the project root.
+
+**Instacart Market Basket Analysis** → [kaggle.com/datasets/psparks/instacart-market-basket-analysis](https://www.kaggle.com/datasets/psparks/instacart-market-basket-analysis)  
+You need six files from this download: `departments.csv`, `aisles.csv`, `products.csv`, `orders.csv`, `order_products__prior.csv`, and `order_products__train.csv`.
+
+**Open Food Facts** → [kaggle.com/datasets/openfoodfacts/world-food-facts](https://www.kaggle.com/datasets/openfoodfacts/world-food-facts)  
+This is a large file (~1.5GB). You only need `en.openfoodfacts.org.products.tsv`. The loader will automatically filter it down to US grocery items.
+
+**US Holiday Dates (2004–2021)** → [kaggle.com/datasets/donnetew/us-holiday-dates-2004-2021](https://www.kaggle.com/datasets/donnetew/us-holiday-dates-2004-2021)  
+Single file: `US Holiday Dates (2004-2021).csv`.
+
+Once downloaded, your `data_raw/` folder should have all 8 files in it. None of these are committed to the repo since they are too large for GitHub — the `.gitignore` excludes them intentionally.
 
 ### 6. Load the warehouse
 ```bash
